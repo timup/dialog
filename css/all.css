@@ -1,0 +1,53 @@
+/* dialog css */
+
+body {
+  background-color: rgba(245, 245, 230, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  text-align: center;
+  font-family: "quicksand";
+  padding-bottom: 20px;
+}
+
+.broadway {
+  text-align: center;
+  font-family: "lato";
+}
+
+.marketing {
+  text-align: center;
+  font-family: "lato"
+}
+
+.marketing h2 {
+  font-family: "quicksand";
+  font-weight: 300;
+}
+
+.marketing h3 {
+  font-family: "lato";
+  font-weight: 300;
+}
+
+.footer {
+  padding-top: 20px;
+  color: #777;
+}
+
+/* narrow bs container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+    /*background-color: rgba(125,125,125,0.5);*/
+  }
+}
