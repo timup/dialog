@@ -1,0 +1,76 @@
+/* dialog css */
+
+body {
+  background-color: rgba(245, 245, 230, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  text-align: center;
+  font-family: "quicksand";
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.header h3 {
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+.broadway {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.broadway h1 {
+  font-family: "lato";
+  font-size: 4em;
+  font-weight: 100;
+}
+
+.marketing {
+  text-align: center;
+  font-family: "lato";
+  font-weight: 300;
+}
+
+.marketing h2 {
+  font-family: "quicksand";
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.marketing h3 {
+  font-weight: 300;
+}
+
+.marketing p {
+  padding-bottom: 20px;
+}
+
+.calendar iframe {
+  
+}
+
+.footer {
+  padding-top: 20px;
+  color: #777;
+}
+
+/* narrow bs container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+    /*background-color: rgba(125,125,125,0.5);*/
+  }
+}
