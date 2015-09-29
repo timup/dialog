@@ -1,11 +1,12 @@
 /* dialog css */
 
 body {
+  font-family: "lato", Helvetica, sans-serif;
+  font-size: 20px;
   -webkit-text-size-adjust: 100%;
   background-color: rgba(245, 245, 230, 0.8);
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 20px;
 }
 
 .header,
@@ -34,11 +35,7 @@ body {
 
 .broadway h1 {
   font-family: "lato";
-<<<<<<< HEAD
-  font-size: 4em;
-=======
   font-size: 3em;
->>>>>>> gh-pages
   font-weight: 100;
 }
 
@@ -63,17 +60,12 @@ body {
   padding-bottom: 20px;
 }
 
-.calendar iframe {
-<<<<<<< HEAD
-
-=======
-
->>>>>>> gh-pages
+.calendar {
+  padding-top: 20px;
 }
 
 .footer {
   padding-top: 20px;
-  color: #777;
 }
 
 /* narrow bs container */
@@ -82,8 +74,6 @@ body {
     max-width: 730px;
     /*background-color: rgba(125,125,125,0.5);*/
   }
-<<<<<<< HEAD
-=======
 
   body {
     font-size: 20px;
@@ -92,5 +82,4 @@ body {
   .broadway h1 {
     font-size: 4em;
   }
->>>>>>> gh-pages
 }
