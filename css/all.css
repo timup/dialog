@@ -1,10 +1,11 @@
 /* dialog css */
 
 body {
+  -webkit-text-size-adjust: 100%;
   background-color: rgba(245, 245, 230, 0.8);
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 36px;
+  font-size: 20px;
 }
 
 .header,
@@ -33,7 +34,7 @@ body {
 
 .broadway h1 {
   font-family: "lato";
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 100;
 }
 
@@ -76,5 +77,9 @@ body {
 
   body {
     font-size: 20px;
+  }
+
+  .broadway h1 {
+    font-size: 4em;
   }
 }
