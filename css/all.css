@@ -49,21 +49,6 @@ a {
   font-weight: 100;
 }
 
-.modal {
-  text-align: center;
-}
-
-.modal-header,
-.modal-footer {
-  border-top: none;
-  border-bottom: none;
-}
-
-#map-canvas {
-  width:500px;
-  height:400px;
-}
-
 .marketing {
   font-family: "lato";
   font-weight: 300;
