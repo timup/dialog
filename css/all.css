@@ -4,20 +4,28 @@ body {
   font-family: "lato", Helvetica, sans-serif;
   font-size: 20px;
   -webkit-text-size-adjust: 100%;
-  background-color: rgba(245, 245, 230, 0.8);
+  background-color: rgba(245, 245, 230, 1);
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+a {
+  color: #428bca;
 }
 
 .header,
 .marketing,
 .footer {
+  text-align: center;
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .header {
-  text-align: center;
+  background: -webkit-linear-gradient(rgba(245, 245, 230, 1), rgba(245, 245, 230, 0.99), rgba(245, 245, 230, 0.9));
+  background: -moz-linear-gradient(rgba(245, 245, 230, 1), rgba(245, 245, 230, 0.99), rgba(245, 245, 230, 0.9));
+  background: -o-linear-gradient(rgba(245, 245, 230, 1), rgba(245, 245, 230, 0.99), rgba(245, 245, 230, 0.9));
+  background: linear-gradient(rgba(245, 245, 230, 1), rgba(245, 245, 230, 0.99), rgba(245, 245, 230, 0.9));
   font-family: "quicksand";
   font-weight: 300;
   padding-bottom: 20px;
@@ -30,6 +38,7 @@ body {
 
 .broadway {
   text-align: center;
+  padding-top: 150px;
   margin-bottom: 50px;
 }
 
@@ -40,7 +49,6 @@ body {
 }
 
 .marketing {
-  text-align: center;
   font-family: "lato";
   font-weight: 300;
 }
@@ -65,7 +73,18 @@ body {
 }
 
 .footer {
-  padding-top: 20px;
+  font-family: "lato";
+  font-size: .75em;
+  font-weight: 300;
+  padding-top: 50px;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer a:hover {
+  color: #428bca;
 }
 
 /* narrow bs container */

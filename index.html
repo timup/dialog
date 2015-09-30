@@ -17,7 +17,7 @@
   <body>
 
     <div class="container">
-      <div class="header clearfix">
+      <div class="header clearfix navbar-fixed-top">
         <h3 class="">dialog</h3>
         <p>A free service offered by <a href="http://vaporwa.re">vaporware</a>.</p>
       </div>
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div class="row calendar">
+      <div class="row calendar" id="calendar">
         <iframe src="https://dialog.youcanbook.me/?noframe=true&skipHeaderFooter=true" style="width:100%;height:800px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true" onload="keepInView(this);"></iframe>
         <script>function keepInView(item) {if((document.documentElement&&document.documentElement.scrollTop)||document.body.scrollTop>item.offsetTop)item.scrollIntoView();}</script>
       </div>
@@ -60,26 +60,32 @@
           <p>The web is a tremendous catalog of valuable information, but
             filtering through it can be time-prohibitive for any professional. Additionally,
             there's rarely one <em>perfect</em> solution for a project's needs.</p>
-          <p>We've been around the block a few times.</p>
-          <p>By no means does dialog aim to solve all problems.  Rather, dialog is a conduit.  
+          <p>Of course, if appropriate, <a href="http://vaporwa.re">vaporware</a> would like to be part of the
+            project's solution. If this truly is the right step, both parties will know.  Otherwise, dialog
+            exists in a space of tremendous talent and capability, and will be happy to make intelligent recomendations.</p>
+          <p>By no means does dialog aim to solve all problems.  Rather, dialog is a conduit- facilitating discussion,
+            so that a proper direction can be realized.</p>
         </div>
       </div>
 
       <div class="row marketing">
-        <h2>How we can help</h2>
+        <h2>Find out how we can help.</h2>
         <div class="col-md-4">
-          <h3>Direction</h3>
         </div>
         <div class="col-md-4">
-          <h3>Opinions</h3>
+          <h3>Start a <a href="#calendar">dialog</a> today.</h3>
         </div>
         <div class="col-md-4">
-          <h3>Ideas</h3>
         </div>
       </div>
 
       <footer class="footer">
-        <p>&copy; Company 2014</p>
+        <div class="col-6-md">
+          <a href="http://vaporwa.re">
+            <img alt="vaporware" height="50" src="img/vw-logo.png">
+            <p class="copyright">copyright © 2015 vaporware</p>
+          </a>
+        </div>
       </footer>
 
     </div> <!-- /container -->
@@ -88,14 +94,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/underscore-min.js"></script>
-    <script src="js/calendar.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var calendar = $("#calendar").calendar(
-            {
-                tmpl_path: "tmpls/",
-                events_source: function () { return []; }
-            });
-    </script>
   </body>
 </html>
