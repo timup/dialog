@@ -13,6 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/calendar.min.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
+
+     <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
 
@@ -31,19 +33,22 @@
       <div class="row marketing">
         <div class="col-md-12">
           <h2>An open dialog is clarity.</h2>
-          <p>As an entreprenuer, building tomorrow’s next generation products and
-            services, the presence of too much information can
-            lead to a reduction in decision quality. Sometimes it
-            helps to step back from the labor and have a conversation.</p>
+          <p>Entreprenuers building tomorrow's products and services
+            are often presented with an abundance of information that can lead to
+            <a href="https://en.wikipedia.org/wiki/Decision_fatigue">decision fatigue</a>.
+            Sometimes it helps to step back and have a conversation.</p>
 
           <h2>Talk to a human.</h2>
-          <p>Directed conversation, a dialog, allows us to reach solutions quickly and easily.
+          <p>Directed conversation allows us to reach solutions quickly and easily.
             Receive advice and opinions, feed the brainstorm, and cut through the noise.
             There's nothing to sign-up for, no app to install- just an open dialog.</p>
 
           <h2>On demand. In HD.</h2>
           <p>Start a dialog today with Tim Upchurch, Client Education Specialist
-            at <a href="http://vaporwa.re/team">vaporware</a>.  Your direction, your questions, on your time.</p>
+            at <a href="http://vaporwa.re/team">vaporware</a>.<br>  Your direction, your questions, on your time.</p>
+            <p>dialog is hosted at <a href="http://hqraleigh.com">HQ Raleigh</a>.<br>
+              <a class="ghost-link" target="_blank" href="https://www.google.com/maps/place/310+S+Harrington+St,+Raleigh,+NC+27603">310 S. Harrington St. Raleigh, NC 27603</a></p>
+            <h3>Select a time below to get started.</h3>
         </div>
       </div>
 
@@ -81,12 +86,37 @@
 
       <footer class="footer">
         <div class="col-6-md">
-          <a href="http://vaporwa.re">
+          <a class="ghost-link" href="http://vaporwa.re">
             <img alt="vaporware" height="50" src="img/vw-logo.png">
             <p class="copyright">copyright © 2015 vaporware</p>
           </a>
         </div>
       </footer>
+
+
+
+<div class="modal fade" id="mapModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div id="map-canvas" class=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
     </div> <!-- /container -->
 
@@ -94,5 +124,46 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      var map;
+      var myCenter=new google.maps.LatLng(53, -1.33);
+      var marker=new google.maps.Marker({
+        position:myCenter
+      });
+
+      function initialize() {
+      var mapProp = {
+          center:myCenter,
+          zoom: 14,
+          draggable: false,
+          scrollwheel: false,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+
+      map = new google.maps.Map(document.getElementById("map-canvas"),mapProp);
+      marker.setMap(map);
+
+      };
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+      google.maps.event.addDomListener(window, "resize", resizingMap());
+
+      $('#mapModal').on('show.bs.modal', function() {
+       //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
+       resizeMap();
+      })
+
+      function resizeMap() {
+       if(typeof map =="undefined") return;
+       setTimeout( function(){resizingMap();} , 400);
+      }
+
+      function resizingMap() {
+       if(typeof map =="undefined") return;
+       var center = map.getCenter();
+       google.maps.event.trigger(map, "resize");
+       map.setCenter(center);
+      }
+      </script>
   </body>
 </html>
