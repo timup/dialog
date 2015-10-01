@@ -81,6 +81,10 @@ a {
   padding-top: 50px;
 }
 
+.copyright {
+  font-size: 0.80em;
+}
+
 .ghost-link {
   color: inherit;
 }
