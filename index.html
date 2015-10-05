@@ -52,16 +52,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2 id="calendar-header">On demand. In HD.</h2>
           <p>Start a dialog today with Tim Upchurch, Client Education Specialist
             at <a href="http://vaporwa.re/team">vaporware</a>.<br>  Your direction, your questions, on your time.</p>
-            <p>Dialog is hosted at <a href="http://hqraleigh.com">HQ Raleigh</a>.<br>
-              <a class="ghost-link" target="_blank" href="https://www.google.com/maps/place/310+S+Harrington+St,+Raleigh,+NC+27603">310 S. Harrington St. Raleigh, NC 27603</a></p>
-            <h3>Select a time below to get started.</h3>
+            <h3>Select a location to get started.</h3>
+            <div class="row location-buttons">
+              <div id="divRaleigh" class="col-md-4 col-xs-4">
+                <button id="buttonRaleigh" class="btn btn-default btn-lg btn-location" type="button" data-toggle="collapse" data-target="#collapseRaleigh" aria-expanded="false" aria-controls="collapseRaleigh">
+                  Raleigh
+                </button>
+              </div>
+              <div id="divDurham" class="col-md-4 col-xs-4">
+                <button id="buttonDurham" class="btn btn-default btn-lg btn-location" type="button" data-toggle="collapse" data-target="#collapseDurham" aria-expanded="false" aria-controls="collapseDurham">
+                  Durham
+                </button>
+              </div>
+              <div id="divCarboro" class="col-md-4 col-xs-4">
+                <button id="buttonCarboro" class="btn btn-default btn-lg btn-location" type="button" data-toggle="collapse" data-target="#collapseCarboro" aria-expanded="false" aria-controls="collapseCarboro">
+                  Carboro
+                </button>
+              </div>
+            </div>
         </div>
       </div>
 
       <div class="row calendar">
-        <iframe src="https://dialog.youcanbook.me/?noframe=true&skipHeaderFooter=true" style="width:100%;height:500px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true" onload=""></iframe>
-        <script>function keepInView(item) {if((document.documentElement&&document.documentElement.scrollTop)||document.body.scrollTop>item.offsetTop)item.scrollIntoView();}</script>
+        <div class="collapse" id="collapseRaleigh">
+          <h4>
+            Dialog is hosted at <a href="http://hqraleigh.com">HQ Raleigh</a>.<br>
+            <a class="ghost-link" target="_blank" href="https://www.google.com/maps/place/310+S+Harrington+St,+Raleigh,+NC+27603">310 S. Harrington St. Raleigh, NC 27603</a>
+          </h4>
+          <h3>Select a time below.</h3>
+          <div class="fluid-media">
+            <!-- style="width:100%;height:100%;border:0px;background-color:transparent;" -->
+            <iframe src="https://dialog.youcanbook.me/?noframe=true&skipHeaderFooter=true"  frameborder="0" allowtransparency="true" onload=""></iframe>
+          </div>
+        </div>
+        <div class="collapse" id="collapseDurham">
+          <h4>
+            Dialog is hosted at <a href="http://americanunderground.com">American Underground</a>.<br>
+            <a class="ghost-link" target="_blank" href="https://www.google.com/maps/place/310+S+Harrington+St,+Raleigh,+NC+27603">310 S. Harrington St. Raleigh, NC 27603</a>
+          </h4>
+          <div class="fluid-media">
+            <!-- style="width:100%;height:100%;border:0px;background-color:transparent;" -->
+            <iframe src="https://dialog.youcanbook.me/?noframe=true&skipHeaderFooter=true"  frameborder="0" allowtransparency="true" onload=""></iframe>
+          </div>
+        </div>
+        <div class="collapse" id="collapseCarboro">
+          <h4>
+            Dialog is hosted at <a href="http://perchstudios.net">Perch Studios</a>.<br>
+            <a class="ghost-link" target="_blank" href="https://www.google.com/maps/place/310+S+Harrington+St,+Raleigh,+NC+27603">310 S. Harrington St. Raleigh, NC 27603</a>
+          </h4>
+          <div class="fluid-media">
+            <!-- style="width:100%;height:100%;border:0px;background-color:transparent;" -->
+            <iframe src="https://dialog.youcanbook.me/?noframe=true&skipHeaderFooter=true"  frameborder="0" allowtransparency="true" onload=""></iframe>
+          </div>
+        </div>
       </div>
+
+
 
       <div class="row marketing">
         <div class="col-md-12">
@@ -105,5 +151,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle-location-btns.js"></script>
   </body>
 </html>
