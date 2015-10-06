@@ -131,6 +131,10 @@ a {
   color: #555;
 }
 
+.btn-location {
+  margin-bottom: 10px;
+}
+
 .btn-location:hover,
 .btn-location:focus,
 .btn-location:active,
